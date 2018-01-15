@@ -1,0 +1,10 @@
+CAPI=1
+[main]
+name = vendor1:library0:a
+depend =
+
+[fileset design]
+file_type = systemVerilogSource
+usage = sim synth
+files =
+  a.sv

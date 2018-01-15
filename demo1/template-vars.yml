@@ -1,0 +1,7 @@
+vendor0:library0:system:0:
+  outputreg: true
+  chain:
+    - a
+    - a
+    - b
+    - a

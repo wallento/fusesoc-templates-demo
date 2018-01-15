@@ -1,0 +1,25 @@
+CAPI=1
+[main]
+name = vendor0:library0:system
+depend =
+  vendor1:library0:a
+  vendor1:library0:b
+
+simulators = verilator xsim
+
+[fileset design]
+file_type = systemVerilogSource
+usage = sim synth
+template_engine = jinja2
+files =
+  system.sv
+
+[fileset testbench]
+file_type = cppSource
+files =
+  tb_system.cpp
+
+[verilator]
+verilator_options = -Wall
+tb_toplevel = tb_system.cpp
+top_module = system
